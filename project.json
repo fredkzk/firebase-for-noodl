@@ -1,0 +1,2078 @@
+{
+    "name": "Firebase",
+    "components": [
+        {
+            "name": "/App",
+            "graph": {
+                "connections": [
+                    {
+                        "fromId": "246f9453-a119-ac78-171e-3806cf596ecc",
+                        "fromProperty": "didMount",
+                        "toId": "f0112002-b9e2-3de4-8093-c33bfa0f7f95",
+                        "toProperty": "Do"
+                    }
+                ],
+                "roots": [
+                    {
+                        "id": "246f9453-a119-ac78-171e-3806cf596ecc",
+                        "type": "Group",
+                        "x": -111.4681915301291,
+                        "y": 311.4376377651178,
+                        "parameters": {
+                            "backgroundColor": "#FFFFFF",
+                            "minHeight": {
+                                "value": 100,
+                                "unit": "vh"
+                            }
+                        },
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": [
+                            {
+                                "id": "a24a02ae-c1b8-1250-72c3-a1d48cbc9558",
+                                "type": "Router",
+                                "parameters": {
+                                    "name": "Main",
+                                    "pages": {
+                                        "routes": [
+                                            "/Start Page",
+                                            "/Sign-up"
+                                        ],
+                                        "startPage": "/Start Page"
+                                    }
+                                },
+                                "ports": [],
+                                "dynamicports": [],
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "id": "f0112002-b9e2-3de4-8093-c33bfa0f7f95",
+                        "type": "/Firebase_init",
+                        "label": "Firebase_init",
+                        "x": -371.8015248634624,
+                        "y": 316.4376377651178,
+                        "parameters": {
+                            "apiKey": "AIzaSyCaPVTsEYQzmx00TqV09oyqEVfPkMyim9E"
+                        },
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": []
+                    }
+                ],
+                "visualRoots": [
+                    "246f9453-a119-ac78-171e-3806cf596ecc"
+                ]
+            },
+            "metadata": {
+                "canvasSize": {
+                    "width": "1039px",
+                    "height": "751px"
+                },
+                "canvasPos": {
+                    "x": 0,
+                    "y": 0
+                }
+            }
+        },
+        {
+            "name": "/Firebase - Get Current User",
+            "id": "b7be6952-575d-223a-314a-edfb832ecad1",
+            "graph": {
+                "connections": [
+                    {
+                        "fromId": "111c5f1b-4cc4-20a6-119c-edb6cd89df98",
+                        "fromProperty": "Do",
+                        "toId": "99ad1749-9a13-5289-c025-89a0ab0cfe7b",
+                        "toProperty": "run"
+                    },
+                    {
+                        "fromId": "99ad1749-9a13-5289-c025-89a0ab0cfe7b",
+                        "fromProperty": "out-userUid",
+                        "toId": "dce2cb9f-a909-d0e9-c408-139f5f61e7e9",
+                        "toProperty": "userUid"
+                    },
+                    {
+                        "fromId": "99ad1749-9a13-5289-c025-89a0ab0cfe7b",
+                        "fromProperty": "out-emailVerified",
+                        "toId": "dce2cb9f-a909-d0e9-c408-139f5f61e7e9",
+                        "toProperty": "emailVerified"
+                    },
+                    {
+                        "fromId": "99ad1749-9a13-5289-c025-89a0ab0cfe7b",
+                        "fromProperty": "out-isAnonymous",
+                        "toId": "dce2cb9f-a909-d0e9-c408-139f5f61e7e9",
+                        "toProperty": "isAnonymous"
+                    },
+                    {
+                        "fromId": "99ad1749-9a13-5289-c025-89a0ab0cfe7b",
+                        "fromProperty": "out-tenantId",
+                        "toId": "dce2cb9f-a909-d0e9-c408-139f5f61e7e9",
+                        "toProperty": "tenantId"
+                    },
+                    {
+                        "fromId": "99ad1749-9a13-5289-c025-89a0ab0cfe7b",
+                        "fromProperty": "out-userCreationTime",
+                        "toId": "dce2cb9f-a909-d0e9-c408-139f5f61e7e9",
+                        "toProperty": "userCreationTime"
+                    },
+                    {
+                        "fromId": "99ad1749-9a13-5289-c025-89a0ab0cfe7b",
+                        "fromProperty": "out-userLastSignInTime",
+                        "toId": "dce2cb9f-a909-d0e9-c408-139f5f61e7e9",
+                        "toProperty": "userLastSignInTime"
+                    },
+                    {
+                        "fromId": "99ad1749-9a13-5289-c025-89a0ab0cfe7b",
+                        "fromProperty": "out-userDisplayName",
+                        "toId": "dce2cb9f-a909-d0e9-c408-139f5f61e7e9",
+                        "toProperty": "userDisplayName"
+                    },
+                    {
+                        "fromId": "99ad1749-9a13-5289-c025-89a0ab0cfe7b",
+                        "fromProperty": "out-userEmail",
+                        "toId": "dce2cb9f-a909-d0e9-c408-139f5f61e7e9",
+                        "toProperty": "userEmail"
+                    },
+                    {
+                        "fromId": "99ad1749-9a13-5289-c025-89a0ab0cfe7b",
+                        "fromProperty": "out-providerId",
+                        "toId": "dce2cb9f-a909-d0e9-c408-139f5f61e7e9",
+                        "toProperty": "providerId"
+                    },
+                    {
+                        "fromId": "99ad1749-9a13-5289-c025-89a0ab0cfe7b",
+                        "fromProperty": "out-userPhotoURL",
+                        "toId": "dce2cb9f-a909-d0e9-c408-139f5f61e7e9",
+                        "toProperty": "userPhotoURL"
+                    },
+                    {
+                        "fromId": "99ad1749-9a13-5289-c025-89a0ab0cfe7b",
+                        "fromProperty": "out-userJwtToken",
+                        "toId": "dce2cb9f-a909-d0e9-c408-139f5f61e7e9",
+                        "toProperty": "userJwtToken"
+                    }
+                ],
+                "roots": [
+                    {
+                        "id": "111c5f1b-4cc4-20a6-119c-edb6cd89df98",
+                        "type": "Component Inputs",
+                        "x": -137,
+                        "y": -211,
+                        "parameters": {},
+                        "ports": [
+                            {
+                                "name": "Do",
+                                "plug": "output",
+                                "type": "*",
+                                "index": 0
+                            },
+                            {
+                                "name": "email",
+                                "plug": "output",
+                                "type": {
+                                    "name": "*"
+                                },
+                                "index": 1
+                            },
+                            {
+                                "name": "password",
+                                "plug": "output",
+                                "type": {
+                                    "name": "*"
+                                },
+                                "index": 2
+                            }
+                        ],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "dce2cb9f-a909-d0e9-c408-139f5f61e7e9",
+                        "type": "Component Outputs",
+                        "x": 341,
+                        "y": -209,
+                        "parameters": {},
+                        "ports": [
+                            {
+                                "name": "Failure",
+                                "plug": "input",
+                                "type": "*",
+                                "index": 1
+                            },
+                            {
+                                "name": "userUid",
+                                "plug": "input",
+                                "type": {
+                                    "name": "*"
+                                },
+                                "index": 2
+                            },
+                            {
+                                "name": "emailVerified",
+                                "plug": "input",
+                                "type": {
+                                    "name": "*"
+                                },
+                                "index": 3
+                            },
+                            {
+                                "name": "isAnonymous",
+                                "plug": "input",
+                                "type": {
+                                    "name": "*"
+                                },
+                                "index": 4
+                            },
+                            {
+                                "name": "tenantId",
+                                "plug": "input",
+                                "type": {
+                                    "name": "*"
+                                },
+                                "index": 5
+                            },
+                            {
+                                "name": "userCreationTime",
+                                "plug": "input",
+                                "type": {
+                                    "name": "*"
+                                },
+                                "index": 6
+                            },
+                            {
+                                "name": "userLastSignInTime",
+                                "plug": "input",
+                                "type": {
+                                    "name": "*"
+                                },
+                                "index": 7
+                            },
+                            {
+                                "name": "userDisplayName",
+                                "plug": "input",
+                                "type": {
+                                    "name": "*"
+                                },
+                                "index": 8
+                            },
+                            {
+                                "name": "userEmail",
+                                "plug": "input",
+                                "type": {
+                                    "name": "*"
+                                },
+                                "index": 9
+                            },
+                            {
+                                "name": "providerId",
+                                "plug": "input",
+                                "type": {
+                                    "name": "*"
+                                },
+                                "index": 10
+                            },
+                            {
+                                "name": "userPhotoURL",
+                                "plug": "input",
+                                "type": {
+                                    "name": "*"
+                                },
+                                "index": 11
+                            },
+                            {
+                                "name": "userJwtToken",
+                                "plug": "input",
+                                "type": {
+                                    "name": "*"
+                                },
+                                "index": 12
+                            }
+                        ],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "99ad1749-9a13-5289-c025-89a0ab0cfe7b",
+                        "type": "JavaScriptFunction",
+                        "label": "Get Current User",
+                        "x": 95,
+                        "y": -223.33333333333331,
+                        "parameters": {
+                            "functionScript": "// The signUpUser function, defined in the head script, wraps the createUserWithEmailAndPassword function.\r\n// It is exposed globally so that it can be called from anywhere in your application\r\nwindow.onAuthStateChanged((user) => {\r\n  if (user) {\r\n    // User is signed in, see docs for a list of available properties\r\n    // https://firebase.google.com/docs/reference/js/auth.user\r\n\r\n    // The user's ID, unique to the Firebase project. Do NOT use this value \r\n    // to authenticate with your backend server if you have one. Use User.getIdToken() instead.\r\n    const uid = user.uid;\r\n    const verified = user.emailVerified;\r\n    const anon = user.isAnonymous;\r\n    const userTenantId = user.tenantId;\r\n    const creationTime = user.metadata.creationTime;\r\n    const lastSignInTime = user.metadata.lastSignInTime;\r\n\r\n    Outputs.userUid(uid);\r\n    Outputs.emailVerified(verified);\r\n    Outputs.isAnonymous(anon);\r\n    Outputs.tenantId(userTenantId);\r\n    Outputs.userCreationTime(creationTime);\r\n    Outputs.userLastSignInTime(lastSignInTime);\r\n\r\n    // Get the JWT\r\n    user.getIdToken().then((token) => {\r\n      Outputs.userJwtToken(token); // Output the JWT\r\n    }).catch((error) => {\r\n      console.error(\"Error getting token: \", error);\r\n    });\r\n\r\n    // Get a user's provider-specific profile info such as display name, email, etc.\r\n    user.providerData.forEach((userInfo, index) => {\r\n      Outputs.userDisplayName(index, userInfo.displayName);\r\n      Outputs.userEmail(index, userInfo.email);\r\n      Outputs.providerId(index, userInfo.providerId);\r\n      Outputs.userPhotoURL(index, userInfo.photoURL);\r\n    });\r\n    // ...\r\n  } else {\r\n    // User is signed out\r\n    // ...\r\n  }\r\n});",
+                            "scriptOutputs": [
+                                {
+                                    "id": "i7yq",
+                                    "label": "emailVerified"
+                                },
+                                {
+                                    "id": "vqty",
+                                    "label": "isAnonymous"
+                                },
+                                {
+                                    "id": "na9e",
+                                    "label": "userCreationTime"
+                                },
+                                {
+                                    "id": "tgqb",
+                                    "label": "userLastSignInTime"
+                                }
+                            ],
+                            "outtype-emailVerified": "boolean",
+                            "outtype-isAnonymous": "boolean",
+                            "outtype-anon": "boolean",
+                            "outtype-verified": "boolean",
+                            "outtype-userCreationTime": "date",
+                            "outtype-userLastSignInTime": "date"
+                        },
+                        "ports": [],
+                        "dynamicports": [
+                            {
+                                "name": "outtype-emailVerified",
+                                "displayName": "Type",
+                                "editorName": "emailVerified | Type",
+                                "plug": "input",
+                                "type": {
+                                    "name": "enum",
+                                    "enums": [
+                                        {
+                                            "value": "string",
+                                            "label": "String"
+                                        },
+                                        {
+                                            "value": "boolean",
+                                            "label": "Boolean"
+                                        },
+                                        {
+                                            "value": "number",
+                                            "label": "Number"
+                                        },
+                                        {
+                                            "value": "object",
+                                            "label": "Object"
+                                        },
+                                        {
+                                            "value": "date",
+                                            "label": "Date"
+                                        },
+                                        {
+                                            "value": "array",
+                                            "label": "Array"
+                                        },
+                                        {
+                                            "value": "color",
+                                            "label": "Color"
+                                        },
+                                        {
+                                            "value": "signal",
+                                            "label": "Signal"
+                                        }
+                                    ],
+                                    "allowEditOnly": true
+                                },
+                                "default": "string",
+                                "parent": "scriptOutputs",
+                                "parentItemId": "i7yq",
+                                "index": 4
+                            },
+                            {
+                                "name": "out-emailVerified",
+                                "displayName": "emailVerified",
+                                "plug": "output",
+                                "type": "boolean",
+                                "group": "Outputs",
+                                "index": 5
+                            },
+                            {
+                                "name": "outtype-isAnonymous",
+                                "displayName": "Type",
+                                "editorName": "isAnonymous | Type",
+                                "plug": "input",
+                                "type": {
+                                    "name": "enum",
+                                    "enums": [
+                                        {
+                                            "value": "string",
+                                            "label": "String"
+                                        },
+                                        {
+                                            "value": "boolean",
+                                            "label": "Boolean"
+                                        },
+                                        {
+                                            "value": "number",
+                                            "label": "Number"
+                                        },
+                                        {
+                                            "value": "object",
+                                            "label": "Object"
+                                        },
+                                        {
+                                            "value": "date",
+                                            "label": "Date"
+                                        },
+                                        {
+                                            "value": "array",
+                                            "label": "Array"
+                                        },
+                                        {
+                                            "value": "color",
+                                            "label": "Color"
+                                        },
+                                        {
+                                            "value": "signal",
+                                            "label": "Signal"
+                                        }
+                                    ],
+                                    "allowEditOnly": true
+                                },
+                                "default": "string",
+                                "parent": "scriptOutputs",
+                                "parentItemId": "vqty",
+                                "index": 6
+                            },
+                            {
+                                "name": "out-isAnonymous",
+                                "displayName": "isAnonymous",
+                                "plug": "output",
+                                "type": "boolean",
+                                "group": "Outputs",
+                                "index": 7
+                            },
+                            {
+                                "name": "outtype-userCreationTime",
+                                "displayName": "Type",
+                                "editorName": "userCreationTime | Type",
+                                "plug": "input",
+                                "type": {
+                                    "name": "enum",
+                                    "enums": [
+                                        {
+                                            "value": "string",
+                                            "label": "String"
+                                        },
+                                        {
+                                            "value": "boolean",
+                                            "label": "Boolean"
+                                        },
+                                        {
+                                            "value": "number",
+                                            "label": "Number"
+                                        },
+                                        {
+                                            "value": "object",
+                                            "label": "Object"
+                                        },
+                                        {
+                                            "value": "date",
+                                            "label": "Date"
+                                        },
+                                        {
+                                            "value": "array",
+                                            "label": "Array"
+                                        },
+                                        {
+                                            "value": "color",
+                                            "label": "Color"
+                                        },
+                                        {
+                                            "value": "signal",
+                                            "label": "Signal"
+                                        }
+                                    ],
+                                    "allowEditOnly": true
+                                },
+                                "default": "string",
+                                "parent": "scriptOutputs",
+                                "parentItemId": "na9e",
+                                "index": 8
+                            },
+                            {
+                                "name": "out-userCreationTime",
+                                "displayName": "userCreationTime",
+                                "plug": "output",
+                                "type": "date",
+                                "group": "Outputs",
+                                "index": 9
+                            },
+                            {
+                                "name": "outtype-userLastSignInTime",
+                                "displayName": "Type",
+                                "editorName": "userLastSignInTime | Type",
+                                "plug": "input",
+                                "type": {
+                                    "name": "enum",
+                                    "enums": [
+                                        {
+                                            "value": "string",
+                                            "label": "String"
+                                        },
+                                        {
+                                            "value": "boolean",
+                                            "label": "Boolean"
+                                        },
+                                        {
+                                            "value": "number",
+                                            "label": "Number"
+                                        },
+                                        {
+                                            "value": "object",
+                                            "label": "Object"
+                                        },
+                                        {
+                                            "value": "date",
+                                            "label": "Date"
+                                        },
+                                        {
+                                            "value": "array",
+                                            "label": "Array"
+                                        },
+                                        {
+                                            "value": "color",
+                                            "label": "Color"
+                                        },
+                                        {
+                                            "value": "signal",
+                                            "label": "Signal"
+                                        }
+                                    ],
+                                    "allowEditOnly": true
+                                },
+                                "default": "string",
+                                "parent": "scriptOutputs",
+                                "parentItemId": "tgqb",
+                                "index": 10
+                            },
+                            {
+                                "name": "out-userLastSignInTime",
+                                "displayName": "userLastSignInTime",
+                                "plug": "output",
+                                "type": "date",
+                                "group": "Outputs",
+                                "index": 11
+                            },
+                            {
+                                "name": "out-userUid",
+                                "displayName": "userUid",
+                                "plug": "output",
+                                "type": "*",
+                                "group": "Outputs",
+                                "index": 12
+                            },
+                            {
+                                "name": "out-tenantId",
+                                "displayName": "tenantId",
+                                "plug": "output",
+                                "type": "*",
+                                "group": "Outputs",
+                                "index": 13
+                            },
+                            {
+                                "name": "out-userJwtToken",
+                                "displayName": "userJwtToken",
+                                "plug": "output",
+                                "type": "*",
+                                "group": "Outputs",
+                                "index": 14
+                            },
+                            {
+                                "name": "out-userDisplayName",
+                                "displayName": "userDisplayName",
+                                "plug": "output",
+                                "type": "*",
+                                "group": "Outputs",
+                                "index": 15
+                            },
+                            {
+                                "name": "out-userEmail",
+                                "displayName": "userEmail",
+                                "plug": "output",
+                                "type": "*",
+                                "group": "Outputs",
+                                "index": 16
+                            },
+                            {
+                                "name": "out-providerId",
+                                "displayName": "providerId",
+                                "plug": "output",
+                                "type": "*",
+                                "group": "Outputs",
+                                "index": 17
+                            },
+                            {
+                                "name": "out-userPhotoURL",
+                                "displayName": "userPhotoURL",
+                                "plug": "output",
+                                "type": "*",
+                                "group": "Outputs",
+                                "index": 18
+                            }
+                        ],
+                        "children": [],
+                        "metadata": {
+                            "merge": {
+                                "soureCodePorts": [
+                                    "functionScript"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "visualRoots": []
+            }
+        },
+        {
+            "name": "/Firebase - User Sign-in",
+            "id": "dc529da9-47f1-057b-7d17-7561574d0753",
+            "graph": {
+                "connections": [
+                    {
+                        "fromId": "e922996a-b8ec-587d-2c08-28682b2eba04",
+                        "fromProperty": "email",
+                        "toId": "b123d700-b330-e7cd-1b70-c33a317047c4",
+                        "toProperty": "in-Email"
+                    },
+                    {
+                        "fromId": "e922996a-b8ec-587d-2c08-28682b2eba04",
+                        "fromProperty": "password",
+                        "toId": "b123d700-b330-e7cd-1b70-c33a317047c4",
+                        "toProperty": "in-Password"
+                    },
+                    {
+                        "fromId": "b123d700-b330-e7cd-1b70-c33a317047c4",
+                        "fromProperty": "out-Success",
+                        "toId": "a951296d-9935-35d8-d959-2716d899822c",
+                        "toProperty": "Success"
+                    },
+                    {
+                        "fromId": "b123d700-b330-e7cd-1b70-c33a317047c4",
+                        "fromProperty": "out-Failure",
+                        "toId": "a951296d-9935-35d8-d959-2716d899822c",
+                        "toProperty": "Failure"
+                    }
+                ],
+                "roots": [
+                    {
+                        "id": "e922996a-b8ec-587d-2c08-28682b2eba04",
+                        "type": "Component Inputs",
+                        "x": -137,
+                        "y": -192,
+                        "parameters": {},
+                        "ports": [
+                            {
+                                "name": "Do",
+                                "plug": "output",
+                                "type": "*",
+                                "index": 0
+                            },
+                            {
+                                "name": "email",
+                                "plug": "output",
+                                "type": {
+                                    "name": "*"
+                                },
+                                "index": 1
+                            },
+                            {
+                                "name": "password",
+                                "plug": "output",
+                                "type": {
+                                    "name": "*"
+                                },
+                                "index": 2
+                            }
+                        ],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "a951296d-9935-35d8-d959-2716d899822c",
+                        "type": "Component Outputs",
+                        "x": 339,
+                        "y": -146,
+                        "parameters": {},
+                        "ports": [
+                            {
+                                "name": "Success",
+                                "plug": "input",
+                                "type": "*",
+                                "index": 0
+                            },
+                            {
+                                "name": "Failure",
+                                "plug": "input",
+                                "type": "*",
+                                "index": 1
+                            }
+                        ],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "b123d700-b330-e7cd-1b70-c33a317047c4",
+                        "type": "JavaScriptFunction",
+                        "label": "signIn With Email And Password",
+                        "x": 97,
+                        "y": -217.33333333333331,
+                        "parameters": {
+                            "functionScript": "// The signUpUser function, defined in the head script, wraps the createUserWithEmailAndPassword function.\r\n// It is exposed globally so that it can be called from anywhere in your application\r\nwindow.signInUser(Inputs.Email, Inputs.Password)\r\n  .then((userCredential) => {\r\n    // Signed in\r\n    const user = userCredential.user;\r\n    Outputs.Success(); // Signal success for further actions\r\n    // Additional logic for user setup can be added here\r\n  })\r\n  .catch((error) => {\r\n    const errorCode = error.code;\r\n    const errorMessage = error.message;\r\n    Outputs.Failure({ errorCode, errorMessage }); // Signal failure with error details\r\n  });"
+                        },
+                        "ports": [],
+                        "dynamicports": [
+                            {
+                                "name": "in-Email",
+                                "displayName": "Email",
+                                "plug": "input",
+                                "type": "*",
+                                "group": "Inputs",
+                                "index": 4
+                            },
+                            {
+                                "name": "in-Password",
+                                "displayName": "Password",
+                                "plug": "input",
+                                "type": "*",
+                                "group": "Inputs",
+                                "index": 5
+                            },
+                            {
+                                "name": "out-Success",
+                                "displayName": "Success",
+                                "plug": "output",
+                                "type": "signal",
+                                "group": "Outputs",
+                                "index": 6
+                            },
+                            {
+                                "name": "out-Failure",
+                                "displayName": "Failure",
+                                "plug": "output",
+                                "type": "*",
+                                "group": "Outputs",
+                                "index": 7
+                            }
+                        ],
+                        "children": [],
+                        "metadata": {
+                            "merge": {
+                                "soureCodePorts": [
+                                    "functionScript"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "visualRoots": []
+            }
+        },
+        {
+            "name": "/Firebase - User Sign-up",
+            "id": "b4d9b139-0488-ae01-6e40-998adf6e0405",
+            "graph": {
+                "connections": [
+                    {
+                        "fromId": "4ef4278e-2c61-d985-9298-fb6b6d166886",
+                        "fromProperty": "email",
+                        "toId": "eeb479d9-7a1e-f091-2996-1a246f88734b",
+                        "toProperty": "in-Email"
+                    },
+                    {
+                        "fromId": "4ef4278e-2c61-d985-9298-fb6b6d166886",
+                        "fromProperty": "password",
+                        "toId": "eeb479d9-7a1e-f091-2996-1a246f88734b",
+                        "toProperty": "in-Password"
+                    },
+                    {
+                        "fromId": "eeb479d9-7a1e-f091-2996-1a246f88734b",
+                        "fromProperty": "out-Success",
+                        "toId": "a2aa1570-93e6-9478-6103-6728a9659397",
+                        "toProperty": "Success"
+                    },
+                    {
+                        "fromId": "eeb479d9-7a1e-f091-2996-1a246f88734b",
+                        "fromProperty": "out-Failure",
+                        "toId": "a2aa1570-93e6-9478-6103-6728a9659397",
+                        "toProperty": "Failure"
+                    }
+                ],
+                "roots": [
+                    {
+                        "id": "4ef4278e-2c61-d985-9298-fb6b6d166886",
+                        "type": "Component Inputs",
+                        "x": -137,
+                        "y": -192,
+                        "parameters": {},
+                        "ports": [
+                            {
+                                "name": "Do",
+                                "plug": "output",
+                                "type": "*",
+                                "index": 0
+                            },
+                            {
+                                "name": "email",
+                                "plug": "output",
+                                "type": {
+                                    "name": "*"
+                                },
+                                "index": 1
+                            },
+                            {
+                                "name": "password",
+                                "plug": "output",
+                                "type": {
+                                    "name": "*"
+                                },
+                                "index": 2
+                            }
+                        ],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "a2aa1570-93e6-9478-6103-6728a9659397",
+                        "type": "Component Outputs",
+                        "x": 339,
+                        "y": -146,
+                        "parameters": {},
+                        "ports": [
+                            {
+                                "name": "Success",
+                                "plug": "input",
+                                "type": "*",
+                                "index": 0
+                            },
+                            {
+                                "name": "Failure",
+                                "plug": "input",
+                                "type": "*",
+                                "index": 1
+                            }
+                        ],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "eeb479d9-7a1e-f091-2996-1a246f88734b",
+                        "type": "JavaScriptFunction",
+                        "label": "create User With Email And Password",
+                        "x": 97,
+                        "y": -217.33333333333331,
+                        "parameters": {
+                            "functionScript": "// The signUpUser function, defined in the head script, wraps the createUserWithEmailAndPassword function.\r\n// It is exposed globally so that it can be called from anywhere in your application\r\nwindow.signUpUser(Inputs.Email, Inputs.Password)\r\n  .then((userCredential) => {\r\n    // Signed up successfully\r\n    const user = userCredential.user;\r\n    Outputs.Success(); // Signal success for further actions\r\n    // Additional logic for user setup can be added here\r\n  })\r\n  .catch((error) => {\r\n    const errorCode = error.code;\r\n    const errorMessage = error.message;\r\n    Outputs.Failure({ errorCode, errorMessage }); // Signal failure with error details\r\n  });"
+                        },
+                        "ports": [],
+                        "dynamicports": [
+                            {
+                                "name": "in-Email",
+                                "displayName": "Email",
+                                "plug": "input",
+                                "type": "*",
+                                "group": "Inputs",
+                                "index": 4
+                            },
+                            {
+                                "name": "in-Password",
+                                "displayName": "Password",
+                                "plug": "input",
+                                "type": "*",
+                                "group": "Inputs",
+                                "index": 5
+                            },
+                            {
+                                "name": "out-Success",
+                                "displayName": "Success",
+                                "plug": "output",
+                                "type": "signal",
+                                "group": "Outputs",
+                                "index": 6
+                            },
+                            {
+                                "name": "out-Failure",
+                                "displayName": "Failure",
+                                "plug": "output",
+                                "type": "*",
+                                "group": "Outputs",
+                                "index": 7
+                            }
+                        ],
+                        "children": [],
+                        "metadata": {
+                            "merge": {
+                                "soureCodePorts": [
+                                    "functionScript"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "visualRoots": []
+            }
+        },
+        {
+            "name": "/Firebase_init",
+            "id": "35ae4420-0472-a690-419e-b9337eb92b83",
+            "graph": {
+                "connections": [
+                    {
+                        "fromId": "c915a1b9-f559-c55b-7d28-7ca6d71f59e1",
+                        "fromProperty": "out-Success",
+                        "toId": "e8b0a4d7-b717-e2d2-9155-461b32aed05e",
+                        "toProperty": "Success"
+                    },
+                    {
+                        "fromId": "c915a1b9-f559-c55b-7d28-7ca6d71f59e1",
+                        "fromProperty": "out-Failure",
+                        "toId": "e8b0a4d7-b717-e2d2-9155-461b32aed05e",
+                        "toProperty": "Failure"
+                    },
+                    {
+                        "fromId": "aecedc62-bcf8-6c8f-97f7-8c62864bbd77",
+                        "fromProperty": "Do",
+                        "toId": "c915a1b9-f559-c55b-7d28-7ca6d71f59e1",
+                        "toProperty": "run"
+                    }
+                ],
+                "roots": [
+                    {
+                        "id": "e8b0a4d7-b717-e2d2-9155-461b32aed05e",
+                        "type": "Component Outputs",
+                        "x": 250,
+                        "y": -110,
+                        "parameters": {},
+                        "ports": [
+                            {
+                                "name": "Success",
+                                "plug": "input",
+                                "type": "*",
+                                "index": 0
+                            },
+                            {
+                                "name": "Failure",
+                                "plug": "input",
+                                "type": "*",
+                                "index": 1
+                            }
+                        ],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "c915a1b9-f559-c55b-7d28-7ca6d71f59e1",
+                        "type": "JavaScriptFunction",
+                        "x": -24,
+                        "y": -108,
+                        "parameters": {
+                            "functionScript": "if (window.firebaseApp) {\r\n    console.log(\"Firebase client is already set up\");\r\n    // Store the already initialized Firebase app instance to a Noodle var for future reference\r\n    Noodl.Variables.app = window.firebaseApp; \r\n    console.log(\"[Initialize] Firebase client is now set up\");\r\n    Outputs.Success(); // Indicate success\r\n} else {\r\n    console.error(\"[Initialize] Firebase client is not initialized\");\r\n    Outputs.Failure(); // Indicate failure\r\n}",
+                            "scriptInputs": [],
+                            "intype-initFbApp": "string"
+                        },
+                        "ports": [],
+                        "dynamicports": [
+                            {
+                                "name": "out-Success",
+                                "displayName": "Success",
+                                "plug": "output",
+                                "type": "signal",
+                                "group": "Outputs",
+                                "index": 4
+                            },
+                            {
+                                "name": "out-Failure",
+                                "displayName": "Failure",
+                                "plug": "output",
+                                "type": "signal",
+                                "group": "Outputs",
+                                "index": 5
+                            }
+                        ],
+                        "children": [],
+                        "metadata": {
+                            "merge": {
+                                "soureCodePorts": [
+                                    "functionScript"
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "id": "aecedc62-bcf8-6c8f-97f7-8c62864bbd77",
+                        "type": "Component Inputs",
+                        "x": -265.4814814814815,
+                        "y": -98.72222222222223,
+                        "parameters": {},
+                        "ports": [
+                            {
+                                "name": "Do",
+                                "plug": "output",
+                                "type": {
+                                    "name": "*"
+                                },
+                                "index": 1
+                            }
+                        ],
+                        "dynamicports": [],
+                        "children": []
+                    }
+                ],
+                "visualRoots": []
+            }
+        },
+        {
+            "name": "/Sign-up",
+            "id": "fcc77789-f529-8182-1bb4-cdde9a79c335",
+            "graph": {
+                "connections": [],
+                "roots": [
+                    {
+                        "id": "6a92ca43-ffff-5c5d-0613-4ed255d62735",
+                        "type": "Page",
+                        "x": 0,
+                        "y": 0,
+                        "parameters": {
+                            "urlPath": "sign-up"
+                        },
+                        "ports": [],
+                        "dynamicports": [
+                            {
+                                "name": "title",
+                                "displayName": "Title",
+                                "type": "string",
+                                "group": "General",
+                                "plug": "input",
+                                "default": "Sign-up",
+                                "index": 31
+                            },
+                            {
+                                "name": "urlPath",
+                                "displayName": "Url Path",
+                                "type": "string",
+                                "group": "General",
+                                "plug": "input",
+                                "default": "sign-up",
+                                "index": 32
+                            }
+                        ],
+                        "children": [
+                            {
+                                "id": "b25744e8-36da-8e7e-11df-46b0fbca86e1",
+                                "type": "Group",
+                                "label": "User Form",
+                                "parameters": {
+                                    "flexDirection": "column",
+                                    "backgroundColor": "#FFFFFF",
+                                    "borderRadius": {
+                                        "value": 8,
+                                        "unit": "px"
+                                    },
+                                    "sizeMode": "contentHeight",
+                                    "clip": true
+                                },
+                                "ports": [],
+                                "dynamicports": [],
+                                "children": [
+                                    {
+                                        "id": "5bcf25a9-574b-6481-1f73-65dbd81e8736",
+                                        "type": "Text",
+                                        "label": "",
+                                        "parameters": {
+                                            "text": "Create account",
+                                            "marginBottom": {
+                                                "value": 16,
+                                                "unit": "px"
+                                            }
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "8636d35d-084e-8cdc-43bd-0a2ce9eca7d8",
+                                        "type": "net.noodl.controls.textinput",
+                                        "label": "Email Input",
+                                        "parameters": {
+                                            "label": "",
+                                            "type": "email",
+                                            "placeholder": "Email",
+                                            "marginBottom": {
+                                                "value": 8,
+                                                "unit": "px"
+                                            }
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "533b071a-293e-2e7c-d803-f05677065776",
+                                        "type": "net.noodl.controls.textinput",
+                                        "label": "Password Input",
+                                        "parameters": {
+                                            "label": "",
+                                            "type": "password",
+                                            "marginBottom": {
+                                                "value": 16,
+                                                "unit": "px"
+                                            },
+                                            "placeholder": "Password"
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "95ec91c3-70b7-98d5-f65c-21c9a8d15c4a",
+                                        "type": "net.noodl.controls.button",
+                                        "parameters": {
+                                            "label": "Sign up"
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "e61a720a-cfea-1431-07b2-3cc8f92a8424",
+                                        "type": "Group",
+                                        "parameters": {
+                                            "flexDirection": "row",
+                                            "sizeMode": "contentHeight",
+                                            "alignItems": "center",
+                                            "marginTop": {
+                                                "value": 16,
+                                                "unit": "px"
+                                            },
+                                            "columnGap": {
+                                                "value": 16,
+                                                "unit": "px"
+                                            }
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": [
+                                            {
+                                                "id": "69033f8d-7a7f-2bbb-ddcd-8da91ac59ebe",
+                                                "type": "Text",
+                                                "label": "",
+                                                "parameters": {
+                                                    "text": "Already have an account?",
+                                                    "marginTop": {
+                                                        "value": 0,
+                                                        "unit": "px"
+                                                    },
+                                                    "sizeMode": "contentSize"
+                                                },
+                                                "ports": [],
+                                                "dynamicports": [],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": "eff04e03-4654-d04c-a60e-516db7583f03",
+                        "type": "PageInputs",
+                        "x": -100,
+                        "y": -50,
+                        "parameters": {},
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "2f400978-c694-5db7-bee3-107434a33757",
+                        "type": "/Firebase - User Sign-in",
+                        "x": 305,
+                        "y": 269.6666666666667,
+                        "parameters": {},
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": []
+                    }
+                ],
+                "visualRoots": [
+                    "6a92ca43-ffff-5c5d-0613-4ed255d62735"
+                ]
+            }
+        },
+        {
+            "name": "/Start Page",
+            "id": "69559017-a17f-333b-c101-fbb0d1b4ce31",
+            "graph": {
+                "connections": [],
+                "roots": [
+                    {
+                        "id": "a4b7e4d4-c01d-1267-30b6-c2b448b90067",
+                        "type": "Page",
+                        "x": 0,
+                        "y": 0,
+                        "parameters": {},
+                        "ports": [],
+                        "dynamicports": [
+                            {
+                                "name": "title",
+                                "displayName": "Title",
+                                "type": "string",
+                                "group": "General",
+                                "plug": "input",
+                                "default": "Start Page",
+                                "index": 14
+                            },
+                            {
+                                "name": "urlPath",
+                                "displayName": "Url Path",
+                                "type": "string",
+                                "group": "General",
+                                "plug": "input",
+                                "default": "start-page",
+                                "index": 15
+                            }
+                        ],
+                        "children": [
+                            {
+                                "id": "fcfbc04f-65ce-bf80-9c09-6cdca911f3fe",
+                                "type": "Text",
+                                "parameters": {
+                                    "alignX": "center",
+                                    "alignY": "center",
+                                    "textAlignX": "center",
+                                    "textStyle": "Display",
+                                    "text": "Hello World!"
+                                },
+                                "ports": [],
+                                "dynamicports": [],
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "id": "10fa011a-db2f-e573-47e6-ed69e091fbc1",
+                        "type": "PageInputs",
+                        "x": -248,
+                        "y": -2,
+                        "parameters": {},
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": []
+                    }
+                ],
+                "visualRoots": [
+                    "a4b7e4d4-c01d-1267-30b6-c2b448b90067"
+                ]
+            }
+        }
+    ],
+    "settings": {
+        "bodyScroll": true,
+        "navigationPathType": "path",
+        "headCode": "<script type=\"module\">\r\n  // Import the functions you need from the SDKs you need\r\n  import { initializeApp } from \"https://www.gstatic.com/firebasejs/10.7.2/firebase-app.js\";\r\n  import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged } from \"https://www.gstatic.com/firebasejs/10.7.2/firebase-auth.js\";\r\n  import { getFirestore } from \"https://www.gstatic.com/firebasejs/10.7.2/firebase-firestore.js\";\r\n\r\n  // Add SDKs for Firebase products  you want to use\r\n  // https://firebase.google.com/docs/web/setup#available-libraries\r\n\r\n  // Your web app's Firebase configuration\r\n  // For Firebase JS SDK v7.20.0 and later, measurementId is optional\r\n  const firebaseConfig = {\r\n    apiKey: \"AIzaSyCaPVTsEYQzmx00TqV09oyqEVfPkMyim9E\",\r\n    authDomain: \"uscape-219cc.firebaseapp.com\",\r\n    projectId: \"uscape-219cc\",\r\n    storageBucket: \"uscape-219cc.appspot.com\",\r\n    messagingSenderId: \"83616129510\",\r\n    appId: \"1:83616129510:web:d2a294cc5670da40b83627\",\r\n    measurementId: \"G-F6F7NF9DCM\"\r\n  };\r\n\r\n  // Initialize Firebase\r\n  const app = initializeApp(firebaseConfig);\r\n  const auth = getAuth(app);\r\n  const db = getFirestore(app);\r\n\r\n  // Set the firebaseApp object to the global 'window' object and expose it to the global scope\r\n  window.firebaseApp = app;\r\n  window.firebaseAuth = auth;\r\n  window.firebaseDB = db;\r\n\r\n  // Function for user sign-up\r\n  window.signUpUser = function(email, password) {\r\n  return createUserWithEmailAndPassword(window.firebaseAuth, email, password);\r\n  };\r\n\r\n  // Function for user sign-in\r\n  window.signInUser = function(email, password) {\r\n  return signInWithEmailAndPassword(window.firebaseAuth, email, password);\r\n  };\r\n\r\n  // Function to get the currently signed-in user\r\n  window.getCurrentUser = function() {\r\n    return window.firebaseAuth.currentUser;\r\n  };\r\n  \r\n  // Observer for user state\r\n  onAuthStateChanged(window.firebaseAuth, (user) => {\r\n    if (user) {\r\n      // User is signed in\r\n      // Perform actions based on the sign-in state here\r\n    } else {\r\n      // User is signed out\r\n      // Handle the sign-out state here\r\n    }\r\n  });\r\n\r\n}\r\n</script>"
+    },
+    "rootNodeId": "246f9453-a119-ac78-171e-3806cf596ecc",
+    "version": "4",
+    "metadata": {
+        "styles": {
+            "text": {
+                "Display": {
+                    "letterSpacing": "Auto",
+                    "lineHeight": {
+                        "value": "120",
+                        "unit": "%"
+                    },
+                    "textTransform": "none",
+                    "fontSize": {
+                        "value": "40",
+                        "unit": "px"
+                    },
+                    "fontFamily": "fonts/Roboto/Roboto-Regular.ttf",
+                    "color": "#000000"
+                },
+                "Headline": {
+                    "fontFamily": "fonts/Roboto/Roboto-Regular.ttf",
+                    "fontSize": {
+                        "value": "32",
+                        "unit": "px"
+                    },
+                    "color": "#000000",
+                    "letterSpacing": "Auto",
+                    "lineHeight": {
+                        "value": "120",
+                        "unit": "%"
+                    },
+                    "textTransform": "none"
+                },
+                "Title Large": {
+                    "fontFamily": "fonts/Roboto/Roboto-Bold.ttf",
+                    "fontSize": {
+                        "value": "24",
+                        "unit": "px"
+                    },
+                    "color": "#000000",
+                    "letterSpacing": "Auto",
+                    "lineHeight": {
+                        "value": "120%",
+                        "unit": "px"
+                    },
+                    "textTransform": "none"
+                },
+                "Title Medium": {
+                    "fontFamily": "fonts/Roboto/Roboto-Medium.ttf",
+                    "fontSize": {
+                        "value": "20",
+                        "unit": "px"
+                    },
+                    "color": "#000000",
+                    "letterSpacing": "Auto",
+                    "lineHeight": {
+                        "value": "120",
+                        "unit": "%"
+                    },
+                    "textTransform": "none"
+                },
+                "Title Small": {
+                    "fontFamily": "fonts/Roboto/Roboto-Bold.ttf",
+                    "fontSize": {
+                        "value": "16",
+                        "unit": "px"
+                    },
+                    "color": "#000000",
+                    "letterSpacing": "Auto",
+                    "lineHeight": {
+                        "value": "120",
+                        "unit": "%"
+                    },
+                    "textTransform": "none"
+                },
+                "Label Large": {
+                    "fontFamily": "fonts/Roboto/Roboto-Medium.ttf",
+                    "fontSize": {
+                        "value": "16",
+                        "unit": "px"
+                    },
+                    "color": "#000000",
+                    "letterSpacing": "Auto",
+                    "lineHeight": {
+                        "value": "120",
+                        "unit": "%"
+                    },
+                    "textTransform": "none"
+                },
+                "Label Medium": {
+                    "fontFamily": "fonts/Roboto/Roboto-Medium.ttf",
+                    "fontSize": {
+                        "value": "14",
+                        "unit": "px"
+                    },
+                    "color": "#000000",
+                    "letterSpacing": "Auto",
+                    "lineHeight": {
+                        "value": "120",
+                        "unit": "%"
+                    },
+                    "textTransform": "none"
+                },
+                "Label Small": {
+                    "fontFamily": "fonts/Roboto/Roboto-Medium.ttf",
+                    "fontSize": {
+                        "value": "12",
+                        "unit": "px"
+                    },
+                    "color": "#000000",
+                    "letterSpacing": "Auto",
+                    "lineHeight": {
+                        "value": "120",
+                        "unit": "%"
+                    },
+                    "textTransform": "none"
+                },
+                "Body Large": {
+                    "fontFamily": "fonts/Roboto/Roboto-Regular.ttf",
+                    "fontSize": {
+                        "value": "20",
+                        "unit": "px"
+                    },
+                    "color": "#000000",
+                    "letterSpacing": "Auto",
+                    "lineHeight": {
+                        "value": "150",
+                        "unit": "%"
+                    },
+                    "textTransform": "none"
+                },
+                "Body Medium": {
+                    "fontFamily": "fonts/Roboto/Roboto-Regular.ttf",
+                    "fontSize": {
+                        "value": "16",
+                        "unit": "px"
+                    },
+                    "color": "#000000",
+                    "letterSpacing": "Auto",
+                    "lineHeight": {
+                        "value": "150",
+                        "unit": "%"
+                    },
+                    "textTransform": "none"
+                },
+                "Body Small": {
+                    "letterSpacing": "Auto",
+                    "lineHeight": {
+                        "value": "150",
+                        "unit": "%"
+                    },
+                    "textTransform": "none",
+                    "fontFamily": "fonts/Roboto/Roboto-Regular.ttf",
+                    "fontSize": {
+                        "value": "14",
+                        "unit": "px"
+                    },
+                    "color": "#000000"
+                }
+            },
+            "colors": {
+                "Primary": "#5836F5",
+                "Primary Dark": "#3F22B8",
+                "Primary Subtle": "#C9BFFC",
+                "Primary Light": "#F7F5FF",
+                "Grey - 900": "#1F1F1F",
+                "Grey - 800": "#383838",
+                "Grey - 700": "#4C4C4C",
+                "Grey - 600": "#757575",
+                "Grey - 500": "#A5A5A5",
+                "Grey - 400": "#CECECE",
+                "Grey - 300": "#E9E9E9",
+                "Grey - 200": "#F4F4F4",
+                "Grey - 100": "#FBFBFB",
+                "Success": "#49AD7F",
+                "Notice": "#F2C441",
+                "Danger": "#F75A4F",
+                "White": "#FFFFFF",
+                "Black": "#000000"
+            }
+        }
+    },
+    "variants": [
+        {
+            "typename": "Text",
+            "parameters": {
+                "textStyle": "Body Medium"
+            },
+            "stateParamaters": {},
+            "stateTransitions": {}
+        },
+        {
+            "typename": "net.noodl.controls.button",
+            "parameters": {
+                "height": {
+                    "value": 40,
+                    "unit": "px"
+                },
+                "sizeMode": "contentWidth",
+                "backgroundColor": "Primary",
+                "iconIconSource": {
+                    "class": "material-icons",
+                    "code": "home"
+                },
+                "iconSpacing": {
+                    "value": 8,
+                    "unit": "px"
+                },
+                "borderRadius": {
+                    "value": 4,
+                    "unit": "px"
+                },
+                "textStyle": "Label Medium",
+                "paddingTop": {
+                    "value": 0,
+                    "unit": "px"
+                },
+                "paddingLeft": {
+                    "value": 24,
+                    "unit": "px"
+                },
+                "paddingRight": {
+                    "value": 24,
+                    "unit": "px"
+                },
+                "paddingBottom": {
+                    "value": 0,
+                    "unit": "px"
+                },
+                "color": "#FFFFFF",
+                "minWidth": {
+                    "value": 80,
+                    "unit": "px"
+                },
+                "useIcon": false,
+                "iconSize": {
+                    "value": 20,
+                    "unit": "px"
+                }
+            },
+            "stateParamaters": {
+                "hover": {
+                    "backgroundColor": "Primary Dark"
+                },
+                "pressed": {
+                    "backgroundColor": "Primary",
+                    "color": "White"
+                },
+                "disabled": {
+                    "backgroundColor": "Grey - 300",
+                    "color": "Grey - 600"
+                }
+            },
+            "stateTransitions": {},
+            "defaultStateTransitions": {
+                "neutral": {
+                    "curve": [
+                        0,
+                        0,
+                        0.58,
+                        1
+                    ],
+                    "dur": 0,
+                    "delay": 0
+                },
+                "hover": {
+                    "curve": [
+                        0,
+                        0,
+                        0.58,
+                        1
+                    ],
+                    "dur": 0,
+                    "delay": 0
+                },
+                "pressed": {
+                    "curve": [
+                        0,
+                        0,
+                        0.58,
+                        1
+                    ],
+                    "dur": 0,
+                    "delay": 0
+                }
+            }
+        },
+        {
+            "typename": "net.noodl.controls.textinput",
+            "parameters": {
+                "useLabel": true,
+                "sizeMode": "explicit",
+                "height": {
+                    "value": 40,
+                    "unit": "px"
+                },
+                "textStyle": "Body Medium",
+                "borderStyle": "solid",
+                "borderRadius": {
+                    "value": 4,
+                    "unit": "px"
+                },
+                "borderWidth": {
+                    "value": 1,
+                    "unit": "px"
+                },
+                "borderColor": "Grey - 700",
+                "labeltextStyle": "Label Small",
+                "paddingLeft": {
+                    "value": 12,
+                    "unit": "px"
+                },
+                "paddingRight": {
+                    "value": 8,
+                    "unit": "px"
+                },
+                "labelSpacing": {
+                    "value": 4,
+                    "unit": "px"
+                },
+                "placeholder": "Type here",
+                "color": "Grey - 900",
+                "placeHolderOpacity": 0.65,
+                "enabled": true,
+                "blockTouch": false,
+                "useIcon": false,
+                "iconIconSource": {
+                    "class": "material-icons",
+                    "code": "home"
+                },
+                "iconSize": {
+                    "value": 20,
+                    "unit": "px"
+                },
+                "iconSpacing": {
+                    "value": 4,
+                    "unit": "px"
+                },
+                "iconColor": "Grey - 700",
+                "labelcolor": "Grey - 700"
+            },
+            "stateParamaters": {
+                "hover": {
+                    "labelcolor": "Grey - 700",
+                    "borderColor": "Grey - 700",
+                    "borderStyle": "solid",
+                    "color": "Grey - 900"
+                },
+                "focused": {
+                    "borderColor": "Primary",
+                    "labelcolor": "Primary",
+                    "borderWidth": {
+                        "value": 1,
+                        "unit": "px"
+                    },
+                    "boxShadowEnabled": false,
+                    "boxShadowColor": "Primary",
+                    "borderStyle": "solid"
+                },
+                "disabled": {
+                    "labelcolor": "Grey - 500",
+                    "backgroundColor": "Grey - 200",
+                    "borderWidth": {
+                        "value": 1,
+                        "unit": "px"
+                    },
+                    "borderColor": "Grey - 500",
+                    "color": "Grey - 600"
+                }
+            },
+            "stateTransitions": {},
+            "defaultStateTransitions": {
+                "neutral": {
+                    "curve": [
+                        0,
+                        0,
+                        0.58,
+                        1
+                    ],
+                    "dur": 0,
+                    "delay": 0
+                },
+                "focused": {
+                    "curve": [
+                        0,
+                        0,
+                        0.58,
+                        1
+                    ],
+                    "dur": 0,
+                    "delay": 0
+                },
+                "hover": {
+                    "curve": [
+                        0,
+                        0,
+                        0.58,
+                        1
+                    ],
+                    "dur": 0,
+                    "delay": 0
+                },
+                "disabled": {
+                    "curve": [
+                        0,
+                        0,
+                        0.58,
+                        1
+                    ],
+                    "dur": 0,
+                    "delay": 0
+                }
+            }
+        },
+        {
+            "typename": "net.noodl.controls.options",
+            "parameters": {
+                "sizeMode": "explicit",
+                "height": {
+                    "value": 40,
+                    "unit": "px"
+                },
+                "borderWidth": {
+                    "value": 1,
+                    "unit": "px"
+                },
+                "borderRadius": {
+                    "value": 4,
+                    "unit": "px"
+                },
+                "borderColor": "Grey - 700",
+                "boxShadowColor": "Dark Gray",
+                "useIcon": true,
+                "iconIconSource": {
+                    "class": "material-icons",
+                    "code": "expand_more"
+                },
+                "iconPlacement": "right",
+                "iconSize": {
+                    "value": 20,
+                    "unit": "px"
+                },
+                "paddingRight": {
+                    "value": 12,
+                    "unit": "px"
+                },
+                "textStyle": "Body Medium",
+                "paddingLeft": {
+                    "value": 12,
+                    "unit": "px"
+                },
+                "marginTop": {
+                    "value": 0,
+                    "unit": "px"
+                },
+                "width": {
+                    "value": 100,
+                    "unit": "%"
+                },
+                "iconColor": "Grey - 700",
+                "placeholderOpacity": 0.65,
+                "placeholder": "Select option",
+                "useLabel": true,
+                "labelSpacing": {
+                    "value": 4,
+                    "unit": "px"
+                },
+                "labeltextStyle": "Label Small",
+                "labelcolor": "Grey - 700",
+                "items": "[\n    {\"Label\":\"Option 1\", \"Value\":\"1\"},\n    {\"Label\":\"Option 2\", \"Value\":\"2\"},\n    {\"Label\":\"Option 3\", \"Value\":\"3\"}\n]"
+            },
+            "stateParamaters": {
+                "hover": {
+                    "borderColor": "Grey - 700",
+                    "borderRadius": {
+                        "value": 4,
+                        "unit": "px"
+                    },
+                    "iconColor": "Grey - 900",
+                    "iconSize": {
+                        "value": 20,
+                        "unit": "px"
+                    },
+                    "iconPlacement": "right",
+                    "color": "Grey - 900",
+                    "labelcolor": "Grey - 700"
+                },
+                "focused": {
+                    "borderColor": "Primary",
+                    "boxShadowColor": "Primary",
+                    "borderRadius": {
+                        "value": 4,
+                        "unit": "px"
+                    },
+                    "useIcon": true,
+                    "iconColor": "Primary",
+                    "iconIconSource": {
+                        "class": "material-icons",
+                        "code": "keyboard_arrow_up"
+                    },
+                    "iconPlacement": "right",
+                    "color": "Grey - 900",
+                    "labelcolor": "Primary"
+                },
+                "pressed": {
+                    "borderRadius": {
+                        "value": 4,
+                        "unit": "px"
+                    }
+                },
+                "disabled": {
+                    "labelcolor": "Grey - 500",
+                    "iconColor": "Grey - 500",
+                    "borderColor": "Grey - 500",
+                    "color": "Grey - 600",
+                    "backgroundColor": "Grey - 200"
+                }
+            },
+            "stateTransitions": {},
+            "defaultStateTransitions": {
+                "neutral": {
+                    "curve": [
+                        0,
+                        0,
+                        0.58,
+                        1
+                    ],
+                    "dur": 0,
+                    "delay": 0
+                },
+                "focused": {
+                    "curve": [
+                        0,
+                        0,
+                        0.58,
+                        1
+                    ],
+                    "dur": 0,
+                    "delay": 0
+                },
+                "hover": {
+                    "curve": [
+                        0,
+                        0,
+                        0.58,
+                        1
+                    ],
+                    "dur": 0,
+                    "delay": 0
+                },
+                "pressed": {
+                    "curve": [
+                        0,
+                        0,
+                        0.58,
+                        1
+                    ],
+                    "dur": 0,
+                    "delay": 0
+                }
+            }
+        },
+        {
+            "typename": "net.noodl.controls.range",
+            "parameters": {
+                "thumbColor": "Primary",
+                "thumbBorderRadius": {
+                    "value": 100,
+                    "unit": "%"
+                },
+                "trackHeight": {
+                    "value": 4,
+                    "unit": "px"
+                },
+                "trackActiveColor": "Primary",
+                "trackColor": "Primary Subtle",
+                "width": {
+                    "value": 100,
+                    "unit": "%"
+                },
+                "trackBorderRadius": {
+                    "value": 100,
+                    "unit": "px"
+                },
+                "thumbHeight": {
+                    "value": 16,
+                    "unit": "px"
+                },
+                "thumbWidth": {
+                    "value": 16,
+                    "unit": "px"
+                }
+            },
+            "stateParamaters": {
+                "hover": {
+                    "thumbColor": "Primary Dark",
+                    "trackActiveColor": "Primary Dark"
+                },
+                "disabled": {
+                    "trackActiveColor": "Grey - 500",
+                    "trackColor": "Grey - 300",
+                    "thumbColor": "Grey - 500"
+                }
+            },
+            "stateTransitions": {}
+        },
+        {
+            "typename": "net.noodl.controls.checkbox",
+            "parameters": {
+                "width": {
+                    "value": 20,
+                    "unit": "px"
+                },
+                "height": {
+                    "value": 20,
+                    "unit": "px"
+                },
+                "useIcon": false,
+                "borderWidth": {
+                    "value": 1,
+                    "unit": "px"
+                },
+                "useLabel": true,
+                "labeltextStyle": "Body Medium",
+                "borderRadius": {
+                    "value": 2,
+                    "unit": "px"
+                },
+                "borderColor": "Grey - 700",
+                "labelfontSize": {
+                    "value": 16,
+                    "unit": "px"
+                },
+                "labelcolor": "Grey - 900",
+                "labelSpacing": {
+                    "value": 12,
+                    "unit": "px"
+                }
+            },
+            "stateParamaters": {
+                "checked": {
+                    "useIcon": true,
+                    "iconIconSource": {
+                        "class": "material-icons",
+                        "code": "check"
+                    },
+                    "backgroundColor": "Primary",
+                    "borderColor": "Primary",
+                    "iconSize": {
+                        "value": 16,
+                        "unit": "px"
+                    }
+                },
+                "disabled": {
+                    "opacity": 0.5
+                },
+                "hover": {
+                    "borderColor": "Grey - 700"
+                },
+                "pressed": {}
+            },
+            "stateTransitions": {},
+            "defaultStateTransitions": {
+                "neutral": {
+                    "curve": [
+                        0,
+                        0,
+                        0.58,
+                        1
+                    ],
+                    "dur": 0,
+                    "delay": 0
+                },
+                "hover": {
+                    "curve": [
+                        0,
+                        0,
+                        0.58,
+                        1
+                    ],
+                    "dur": 300,
+                    "delay": 0
+                },
+                "checked": {
+                    "curve": [
+                        0,
+                        0,
+                        0.58,
+                        1
+                    ],
+                    "dur": 0,
+                    "delay": 0
+                }
+            }
+        },
+        {
+            "typename": "net.noodl.controls.radiobutton",
+            "parameters": {
+                "width": {
+                    "value": 20,
+                    "unit": "px"
+                },
+                "height": {
+                    "value": 20,
+                    "unit": "px"
+                },
+                "useLabel": true,
+                "labeltextStyle": "Body Large",
+                "borderWidth": {
+                    "value": 1,
+                    "unit": "px"
+                },
+                "value": "0",
+                "useIcon": false,
+                "fillColor": "transparent",
+                "borderColor": "Grey - 700",
+                "labelfontSize": {
+                    "value": 16,
+                    "unit": "px"
+                },
+                "marginBottom": {
+                    "value": 8,
+                    "unit": "px"
+                },
+                "labelcolor": "Grey - 900",
+                "labelSpacing": {
+                    "value": 12,
+                    "unit": "px"
+                }
+            },
+            "stateParamaters": {
+                "checked": {
+                    "fillColor": "Primary",
+                    "borderColor": "Primary",
+                    "borderWidth": {
+                        "value": 1,
+                        "unit": "px"
+                    },
+                    "backgroundColor": "transparent",
+                    "width": {
+                        "value": 20,
+                        "unit": "px"
+                    },
+                    "height": {
+                        "value": 20,
+                        "unit": "px"
+                    },
+                    "fillSpacing": {
+                        "value": 2,
+                        "unit": "px"
+                    }
+                },
+                "hover": {
+                    "backgroundColor": "transparent",
+                    "borderColor": "Grey - 700",
+                    "width": {
+                        "value": 20,
+                        "unit": "px"
+                    },
+                    "height": {
+                        "value": 20,
+                        "unit": "px"
+                    }
+                },
+                "disabled": {
+                    "borderColor": "Grey - 500",
+                    "labelcolor": "Grey - 500",
+                    "fillColor": "transparent"
+                }
+            },
+            "stateTransitions": {},
+            "defaultStateTransitions": {
+                "neutral": {
+                    "curve": [
+                        0,
+                        0,
+                        0.58,
+                        1
+                    ],
+                    "dur": 0,
+                    "delay": 0
+                },
+                "hover": {
+                    "curve": [
+                        0,
+                        0,
+                        0.58,
+                        1
+                    ],
+                    "dur": 0,
+                    "delay": 0
+                },
+                "checked": {
+                    "curve": [
+                        0,
+                        0,
+                        0.58,
+                        1
+                    ],
+                    "dur": 0,
+                    "delay": 0
+                }
+            }
+        }
+    ]
+}
